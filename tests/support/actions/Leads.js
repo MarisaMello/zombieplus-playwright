@@ -1,14 +1,14 @@
 
 const { expect } = require('@playwright/test');
 
-export class LandingPage {
+export class Leads {
 
     constructor(page){
         this.page = page
     }
 
     async visit() {
-        await this.page.goto('http://localhost:3000/');
+        await this.page.goto('/');
     }
     async openLeadModal() {
         await this.page.getByRole('button', { name: /Aperte o play/ }).click();
